@@ -1,12 +1,12 @@
 export default {
   name: 'post',
-  title: 'Post',
+  title: 'Wyniki',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Title',
-      type: 'string',
+      title: 'Data Turnieju',
+      type: 'date',
     },
     {
       name: 'slug',
@@ -19,33 +19,36 @@ export default {
     },
     {
       name: 'author',
-      title: 'Author',
+      title: 'Autor',
       type: 'reference',
       to: {type: 'author'},
     },
     {
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Obrazek',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'place',
+      title: 'Miejsce Gry',
+      type: 'reference',
+      to: {type: 'place'},
     },
     {
       name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      title: 'Wyniki',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        },
+      ],
     },
   ],
 
