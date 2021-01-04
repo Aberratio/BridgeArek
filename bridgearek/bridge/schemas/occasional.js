@@ -1,10 +1,15 @@
 export default {
-  name: 'post',
-  title: 'Wtorkowe',
+  name: 'occasional',
+  title: 'Okazjonalne',
   type: 'document',
   fields: [
     {
       name: 'title',
+      title: 'Tytuł Turnieju',
+      type: 'string',
+    },
+    {
+      name: 'date',
       title: 'Data Turnieju',
       type: 'date',
     },

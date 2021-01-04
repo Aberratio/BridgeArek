@@ -14,30 +14,8 @@ export default {
             type: "datetime",
         },
         {
-            name: "place",
-            type: "string",
-        },
-        {
             name: "description",
             type: "text",
-        },
-        {
-            name: "projectType",
-            title: "Miejsce gry",
-            type: "string",
-            options: {
-                list: [
-                    {
-                        value: "personal", title: "Personal"
-                    },
-                    {
-                        value: "client", title: "Client"
-                    },
-                    {
-                        value: "school", title: "School"
-                    },
-                ],
-            },
         },
         {
             name: "link",

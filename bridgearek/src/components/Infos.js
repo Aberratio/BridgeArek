@@ -7,7 +7,7 @@ export default function Project() {
     useEffect(() => {
         sanityClient.fetch(`*[_type == "project"]{
             title, 
-            data,
+            date,
             place,
             description,
             projectType,
@@ -19,9 +19,9 @@ export default function Project() {
     }, []);
 
     return (
-        <main className="bg-white min-h-screen p-12">
-            <section className="constainer mx-auto">
-                <h1 className="text-5xl flex justify-center cursive mb-12">Ogłoszenia</h1>
+        <main className="bg-gray-100 min-h-screen p-12">
+            <section className="container mx-auto">
+                <h1 className="text-5xl flex justify-center cursive mb-12 my-primary-text">Ogłoszenia</h1>
                 <section className="grid grid-cols-2 gap-8">
                     {projectData && projectData.map((project, index) => (
                         <article className="relative rounded-lgt shadow-xl bg-white p-16">
@@ -30,22 +30,14 @@ export default function Project() {
                             </h3>
                             <div className="text-gray-500 text-xs space-x-4">
                                 <span>
-                                    <strong className="font-bold">Finished on</strong>:{" "}
-                                    {new Date(project.date).toLocaleDateString}
-                                </span>
-                                <span>
-                                    <strong className="font-bold">Company</strong>:{" "}
-                                    {project.place}
-                                </span>
-                                <span>
-                                    <strong className="font-bold">Type</strong>:{" "}
-                                    {project.projectType}
+                                    <strong className="font-bold">Opublikowano</strong>:{" "}
+                                    { new Date(project.date).toLocaleString() }
                                 </span>
                                 <p className="my-6 text-lg text-gray-700 leading-relaxed">
                                     {project.description}
                                 </p>
                                 <a href={project.link} target="_blank" rel="noopener norefeerer" className="text-red-500 font-bold hover:underline hover:text-red-400">
-                                    View The Project{" "}
+                                    Zobacz{" "}
                                     <span role="img" aria-label="right pointer">
 
                                     </span>

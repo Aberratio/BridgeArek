@@ -3,32 +3,38 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
     return (
-        <header className="my-primary-background">
+        <header className="bg-black bg-opacity-80">
             <div className="container mx-auto flex justify-between">
-                <nav className="flex">
+                <nav className="flex text-lg my-primary-text">
                     <NavLink 
+                        className="inflex-flex items-center text-green-300 py-8 px-3 mr-6 text-red-50 hover:text-blue-100 text-4xl font-bold cursive tracking-widest" 
                         activeClassName="text-white"
-                        className="inflex-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-blue-100 text-4xl font-bold cursive tracking-widest" 
                         to="/" 
                         exact>
-                        Areczek
+                        Arkowe
                     </NavLink>
                     <NavLink 
+                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100 text-xl"
                         activeClassName="text-blue-100"
-                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100"
-                        to="/project">
+                        to="/ogloszenia">
                         Ogłoszenia 
                     </NavLink>
                     <NavLink 
+                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100 text-xl"
                         activeClassName="block text-blue-100"
-                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100"
-                        to="/post">
-                        Wyniki
+                        to="/wtorkowe">
+                        Wtorkowe
                     </NavLink>
                     <NavLink 
+                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100 text-xl"
+                        activeClassName="block text-blue-100"
+                        to="/okazjonalne">
+                        Okazjonalne
+                    </NavLink>
+                    <NavLink 
+                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100 text-xl"
                         activeClassName="text-blue-100"
-                        className="inline-flex items-center py-3 px-3 my-6 hover:text-blue-100"
-                        to="/about">
+                        to="/info">
                         Informacje
                     </NavLink>
                 </nav>

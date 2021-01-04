@@ -10,6 +10,7 @@ import post from './post'
 import project from './project'
 import author from './author'
 import place from './place'
+import occasional from './occasional'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,6 +22,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
+    occasional,
     author,
     project,
     place,
