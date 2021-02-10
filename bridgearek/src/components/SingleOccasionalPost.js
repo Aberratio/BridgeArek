@@ -36,8 +36,8 @@ export default function SingleOccasionalPost() {
     if (!singleOccasionalPost) return <div>Ładowanie...</div>;
 
     return (
-        <main className="bg-gray-200 min-h-screen p-12">
-            <article className="container shadow-lg mx-auto my-primary-background rounded-lg">
+        <main className="bg-gray-200 min-h-screen p-12 mt-12 sm:mt-48 lg:mt-24">
+            <article className="container shadow-lg mx-auto bg-black opacity-80 rounded-lg">
                 <header className="relative">
                     <div className="absolute h-full w-full flex items-center justify-center p-8">
                         <div className="bg-white bg-opacity-95 rounded p-12">

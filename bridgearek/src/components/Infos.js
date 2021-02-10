@@ -19,11 +19,13 @@ export default function Project() {
     }, []);
 
     return (
-        <main className="bg-gray-100 min-h-screen p-12">
+        <main className="bg-gray-100 min-h-screen p-5 pt-12 mt-12 sm:mt-48 lg:mt-24">
             <section className="container mx-auto">
-                <h1 className="text-5xl flex justify-center cursive mb-12 my-primary-text">Ogłoszenia</h1>
-                <section className="grid grid-cols-2 gap-8">
-                    {projectData && projectData.map((project, index) => (
+                <h1 className="text-5xl flex justify-center cursive my-primary-text">Ogłoszenia</h1>
+                <section className="grid md:grid-cols-2 grid-cols-1 gap-8 p-4 md:p-12">
+                    {projectData && projectData
+                    .sort((a, b) => a.date < b.date ? 1 : -1)
+                    .map((project, index) => (
                         <article className="relative rounded-lgt shadow-xl bg-white p-16">
                             <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
                                 <a href={project.link} alt={project.title} target="_blank" rel="noopener norefeerer">{project.title}</a>

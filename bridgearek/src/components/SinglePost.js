@@ -35,14 +35,14 @@ export default function SinglePost() {
     if (!singlePost) return <div>Ładowanie...</div>;
 
     return (
-        <main className="bg-gray-200 min-h-screen p-12">
-            <article className="container shadow-lg mx-auto my-primary-background rounded-lg">
+        <main className="bg-gray-200 min-h-screen p-12 mt-12 sm:mt-48 lg:mt-24">
+            <article className="container shadow-lg mx-auto bg-black opacity-80 rounded-lg">
                 <header className="relative">
                     <div className="absolute h-full w-full flex items-center justify-center p-8">
-                        <div className="bg-white bg-opacity-90 rounded p-12">
+                        <div className="bg-white bg-opacity-95 rounded p-12">
                             <h1 className="cursive text-3xl lg:text-6xl mb-4">{singlePost.title}</h1>
                             <span className="block relative h-full flex justify-end items-end pb-4">
-                                <p className="cursive flex items-center pl-2 text-1xl bg-red-500 font-bold text-red-100 pr-2 rounded">{singlePost.placeName}</p>
+                                <p className="bold flex items-center pl-2 text-1xl bg-red-500 font-bold text-red-100 pr-2 rounded">{singlePost.placeName}</p>
                             </span>
                             <div className="flex mr-10 text-gray-800">
                                 <img 
@@ -50,7 +50,7 @@ export default function SinglePost() {
                                     alt={singlePost.name}
                                     className="w-10 h-10 rounded-full"
                                 />
-                                <p className="cursive flex items-center pl-2 text-2xl">{singlePost.name}</p>
+                                <p className="bold flex items-center pl-2 text-2xl">{singlePost.name}</p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export default function SinglePost() {
                         style={{ height: "400px" }} 
                     />
                 </header>
-                <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+                <div className="px-16 text-white lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
                     <BlockContent
                     blocks={singlePost.body}
                     projectId="pt5uct8q"
