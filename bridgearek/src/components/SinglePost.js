@@ -64,7 +64,7 @@ export default function SinglePost() {
                 <div className="px-16 text-white lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
                     <BlockContent
                     blocks={singlePost.body}
-                    projectId="pt5uct8q"
+                    projectId="096pgk60"
                     dataset="production"
                     />
                 </div>
